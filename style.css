@@ -1,12 +1,6 @@
 /* || Variabeles */
 :root {
   --background-color: rgb(255, 255, 255);
-  /* --color-one: rgb(196, 229, 234);
-  --color-two: rgb(153, 197, 199);
-  --color-three: rgb(192, 213, 208);
-  --color-four: rgb(226, 233, 221);
-  --color-five: rgb(243, 236, 231);
-  --color-six: rgb(243, 239, 239); */
   --color-one: rgb(31, 122, 140);
   --color-two: rgb(144, 224, 239);
   --color-three: rgb(197, 240, 247);
@@ -23,6 +17,7 @@
   padding: 0;
   margin: 0;
   font-size: 24px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -38,10 +33,20 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-/* || HOME */
-.home-grid {
+/* || GRID */
+.base-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.inside-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 50px 0px;
+}
+
+/* || AREAS */
+.home-areas {
   grid-template-areas:
   'header header'
   'about about'
@@ -50,76 +55,76 @@ h1, h2, h3, h4, h5, h6 {
   'footer footer';
 }
 
-/* || HEADER */
-.header {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+.contact-areas {
   grid-template-areas:
-  'logo logo menu menu menu menu menu menu menu .';
+  'header header'
+  'contact contact'
+  'spotify boek'
+  'footer footer';
+}
+
+
+/* || PLANES */
+.top-plane {
+  background-color:  var(--color-four);
+  border-bottom-right-radius: 80%;
+  border-bottom-left-radius: 25%;
+}
+
+.plane-one {
+  background-color: var(--color-three);
+  border-radius: 5%;
+  padding: 30px;
+}
+
+
+/* || ADDONS  */
+.shadow {
   box-shadow: 0px 3px 10px grey;
-  color: var(--color-one);
-  font-weight: bold;
-  font-family: monospace;
-  position: sticky;
-  top: 0;
-  min-height: var(--line-height-header);
-  z-index: 99;
-  background-color: var(--color-six);
 }
 
-.logo-class {
-  grid-area: logo;
-  text-align: right;
-  white-space: nowrap;
+/* || CONTACT */
+.contact {
+  grid-area: contact;
+  grid-template-areas:
+  '. . form form form form form form . .';
 }
 
-h1 {
-  font-size: 2.2vw;
-  line-height: var(--line-height-header);
+.contact-class {
+  grid-area: form;
 }
 
-.menu-class {
-  grid-area: menu;
-  text-align: center;
-  font-size: 20px;
-  /* background-color: inherit; */
-  line-height: var(--line-height-header);
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-.menu-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+input[type=submit] {
+  background-color: var(--color-one);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.menu-list li {
-  display: inline-block;
+input[type=submit]:hover {
+  opacity: 0.75;
 }
 
-.menu-link, .dropbtn {
-  display: inline-block;
-  text-align: center;
-  padding: 0px 10px;
-  text-decoration: none;
-}
 
-.menu-link:hover, .menu-active {
-  text-decoration: underline;
-}
 
 /* || ABOUT */
 .about-me {
   grid-area: about;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.2fr 1fr 1fr;
   grid-template-areas:
-  '. . info info info . about-me-image .';
-  background-color:  var(--color-four);
-  border-bottom-right-radius: 80%;
-  border-bottom-left-radius: 25%;
-  padding: 50px 0px;
+  '. . info info info info info about-me-image . .';
 }
 
 .about-me h2 {
@@ -133,9 +138,6 @@ h1 {
   font-family: monospace;
 }
 
-.about-me h3:last-of-type {
-  padding-top: 40px;
-}
 
 .about-me-info-class {
   grid-area: info;
@@ -157,26 +159,18 @@ h1 {
 .about-me-pic {
   height: 500px;
   width: auto;
-  box-shadow: 0px 3px 10px grey;
 }
 
 
 /* || HERKENNING */
 .herkenning {
   grid-area: herkenning;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-  '. . tekst tekst tekst tekst . .';
-  /* background-color:  var(--color-three); */
-  padding: 50px 0px;
+  '. . tekst tekst tekst tekst tekst tekst . .';
 }
 
 .tekst-class {
   grid-area: tekst;
-  background-color: var(--color-three);
-  border-radius: 5%;
-  padding: 30px;
 }
 
 .tekst-class h3 {
@@ -295,4 +289,105 @@ h1 {
 /* || ANIMATION */
 script {
   display: none;
+}
+
+
+/* || BUTTON */
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 20px 2px;
+  cursor: pointer;
+  background-color: var(--color-one);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+
+/* || HEADER */
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  'logo logo menu menu menu menu menu menu menu .';
+  color: var(--color-one);
+  font-weight: bold;
+  font-family: monospace;
+  position: sticky;
+  top: 0;
+  min-height: var(--line-height-header);
+  z-index: 99;
+  background-color: var(--color-six);
+}
+
+.logo-class {
+  grid-area: logo;
+  text-align: right;
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: 2.2vw;
+  line-height: var(--line-height-header);
+}
+
+.menu-class {
+  grid-area: menu;
+  text-align: center;
+  font-size: 20px;
+  /* background-color: inherit; */
+  line-height: var(--line-height-header);
+}
+
+.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-list li {
+  display: inline-block;
+}
+
+.menu-link, .dropbtn {
+  display: inline-block;
+  text-align: center;
+  padding: 0px 10px;
+  text-decoration: none;
+}
+
+.menu-link:hover, .menu-active {
+  text-decoration: underline;
+}
+
+
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  padding: 10px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#backToTopBtn:hover {
+  opacity: 1; /* Add a dark-grey background on hover */
 }
