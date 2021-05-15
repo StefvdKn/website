@@ -1,0 +1,270 @@
+/* || Variabeles */
+:root {
+  --color-one: #707c64;
+  --color-two: #b3c79f;
+  --color-three: #ffffef;
+
+  --line-height-header: 80px;
+}
+
+/* || BASE */
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-three);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* || AREAS */
+.page-grid {
+  display: grid;
+  grid-template-areas:
+  'header'
+  'call-to-action'
+  'droom'
+  'gevoel'
+  'call-to-fly'
+  'podcast'
+  'mijn-verhaal'
+  'succes'
+  'insta'
+  'footer';
+
+  grid-template-columns: 1fr;
+}
+
+
+/* // HEADER */
+.header {
+  grid-area: header;
+
+  display: grid;
+  grid-template-areas: 'logo menu';
+  grid-template-columns: 15vw auto;
+
+  height: var(--line-height-header);
+  background-color: var(--color-one);
+
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  grid-area: logo;
+  margin-left: 2vw;
+
+  color: var(--color-three);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+
+
+/* // CALL TO ACTION */
+.call-to-action {
+  grid-area: call-to-action;
+
+  display: grid;
+
+  grid-template-areas: '. text . pic .';
+  grid-template-columns: 15vw auto 5vw auto 15vw;
+
+  height: auto;
+}
+
+.cta-text {
+  grid-area: text;
+  text-align: center;
+  height: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cta-pic-grid {
+  grid-area: pic;
+
+  margin: 40px 0px;
+}
+
+.cta-pic {
+  height: 500px;
+  width: auto;
+}
+
+
+/* // DROOM */
+.droom {
+  grid-area: droom;
+  background-color: var(--color-two);
+
+  height: auto;
+}
+
+.droom-text {
+  margin: 50px 15vw;
+  text-align: center;
+}
+
+
+/* // GEVOEL */
+.gevoel {
+  grid-area: gevoel;
+
+  display: grid;
+
+  grid-template-areas: '. pic . text .';
+  grid-template-columns: 15vw auto 5vw auto 15vw;
+
+  height: auto;
+}
+
+.gevoel-text {
+  grid-area: text;
+  text-align: center;
+  height: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.gevoel-pic-grid {
+  grid-area: pic;
+
+  margin: 40px 0px;
+}
+
+.gevoel-pic {
+  height: 500px;
+  width: auto;
+}
+
+
+/* // CALL TO FLY */
+.call-to-fly {
+  grid-area: call-to-fly;
+  background-color: var(--color-two);
+
+  height: auto;
+}
+
+.ctf-text {
+  margin: 50px 15vw;
+  text-align: center;
+}
+
+
+/* // PODCAST */
+.podcast {
+  grid-area: podcast;
+
+  height: auto;
+
+  text-align: center;
+
+  margin: 40px;
+}
+
+
+/* // MIJN VERHAAL */
+.mijn-verhaal {
+  grid-area: mijn-verhaal;
+  background-color: var(--color-two);
+
+  display: grid;
+
+  grid-template-areas: '. text . pic .';
+  grid-template-columns: 15vw auto 5vw auto 15vw;
+
+  height: auto;
+}
+
+.mv-text {
+  grid-area: text;
+  text-align: center;
+  height: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mv-pic-grid {
+  grid-area: pic;
+
+  margin: 40px 0px;
+}
+
+.mv-pic {
+  height: 500px;
+  width: auto;
+}
+
+
+/* // SUCCES */
+.succes {
+  grid-area: succes;
+
+  height: 500px;
+}
+
+
+/* // INSTA */
+.insta {
+  grid-area: insta;
+  background-color: var(--color-two);
+
+
+  height: 500px;
+}
+
+
+/* // FOOTER */
+.footer {
+  text-align: center;
+  grid-area: footer;
+
+  background-color: var(--color-one);
+
+  height: var(--line-height-header);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  '. social social social .'
+  'copyright copyright copyright copyright copyright';
+}
+
+.socials {
+  grid-area: social;
+}
+
+.socials li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.socials .fa {
+  padding: 10px;
+  padding-right: 0px;
+  margin-left: 12px;
+  font-size: 25px;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer small {
+  grid-area: copyright;
+  font-size: 20px;
+}

@@ -1,0 +1,131 @@
+/* || Variabeles */
+:root {
+  --color-one: #707c64;
+  --color-two: #b3c79f;
+  --color-three: #ffffef;
+
+  --line-height-header: 80px;
+}
+
+/* || BASE */
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-three);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* || AREAS */
+.page-grid {
+  display: grid;
+  grid-template-areas:
+  'header'
+  'wat'
+  'klachten'
+  'resultaat'
+  'wie'
+  'kosten'
+  'footer';
+
+  grid-template-columns: 1fr;
+}
+
+
+/* // HEADER */
+.header {
+  grid-area: header;
+
+  display: grid;
+  grid-template-areas: 'logo menu';
+  grid-template-columns: 15vw auto;
+
+  height: var(--line-height-header);
+  background-color: var(--color-one);
+
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  grid-area: logo;
+  margin-left: 2vw;
+}
+
+.menu-grid {
+  grid-area: menu;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item {
+  list-style-type: none;
+}
+
+
+/* // WAT */
+
+/* // KLACTEN */
+
+/* // RESULTAAT */
+
+/* // WIE */
+
+/* // KOSTEN */
+
+
+/* // FOOTER */
+.footer {
+  text-align: center;
+  grid-area: footer;
+
+  background-color: var(--color-one);
+
+  height: var(--line-height-header);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  '. social social social .'
+  'copyright copyright copyright copyright copyright';
+}
+
+.socials {
+  grid-area: social;
+}
+
+.socials li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.socials .fa {
+  padding: 10px;
+  padding-right: 0px;
+  margin-left: 12px;
+  font-size: 25px;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer small {
+  grid-area: copyright;
+  font-size: 20px;
+}

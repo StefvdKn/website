@@ -1,0 +1,18 @@
+.menu-grid {
+  grid-area: menu;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item {
+  list-style-type: none;
+}
+
+.sub-menu {
+
+}

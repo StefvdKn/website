@@ -1,0 +1,180 @@
+/* || Variabeles */
+:root {
+  --color-one: #707c64;
+  --color-two: #b3c79f;
+  --color-three: #ffffef;
+
+  --line-height-header: 80px;
+}
+
+/* || BASE */
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-three);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* || AREAS */
+.page-grid {
+  display: grid;
+  grid-template-areas:
+  'header'
+  'mijn-verhaal'
+  'tien-dingen'
+  'footer';
+
+  grid-template-columns: 1fr;
+}
+
+
+/* // HEADER */
+.header {
+  grid-area: header;
+
+  display: grid;
+  grid-template-areas: 'logo menu';
+  grid-template-columns: 15vw auto;
+
+  height: var(--line-height-header);
+  background-color: var(--color-one);
+
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  grid-area: logo;
+  margin-left: 2vw;
+}
+
+.menu-grid {
+  grid-area: menu;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item {
+  list-style-type: none;
+}
+
+
+/* // VERHAAL */
+.mijn-verhaal {
+  grid-area: mijn-verhaal;
+  background-color: var(--color-two);
+
+  display: grid;
+
+  grid-template-areas: '. text . pic .';
+  grid-template-columns: 15vw auto 5vw auto 15vw;
+
+  height: auto;
+}
+
+.mv-text {
+  grid-area: text;
+  text-align: center;
+  height: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mv-pic-grid {
+  grid-area: pic;
+
+  margin: 40px 0px;
+}
+
+.mv-pic {
+  height: 500px;
+  width: auto;
+}
+
+/* // 10 DINGEB */
+.tiendingen {
+  grid-area: tien-dingen;
+
+  display: grid;
+
+  grid-template-areas: '. pic . text .';
+  grid-template-columns: 15vw auto 5vw auto 15vw;
+
+  height: auto;
+}
+
+.td-text {
+  grid-area: text;
+  text-align: center;
+  height: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.td-pic-grid {
+  grid-area: pic;
+
+  margin: 40px 0px;
+}
+
+.td-pic {
+  height: 500px;
+  width: auto;
+}
+
+/* // FOOTER */
+.footer {
+  text-align: center;
+  grid-area: footer;
+
+  background-color: var(--color-one);
+
+  height: var(--line-height-header);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  '. social social social .'
+  'copyright copyright copyright copyright copyright';
+}
+
+.socials {
+  grid-area: social;
+}
+
+.socials li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.socials .fa {
+  padding: 10px;
+  padding-right: 0px;
+  margin-left: 12px;
+  font-size: 25px;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer small {
+  grid-area: copyright;
+  font-size: 20px;
+}
