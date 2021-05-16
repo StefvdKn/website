@@ -34,3 +34,7 @@
   transform: translateX(-1vw);
   line-height: 40px;
 }
+
+.sub-menu > .menu-item {
+  border-top: solid 1px var(--color-three);
+}
