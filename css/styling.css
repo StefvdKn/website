@@ -1,0 +1,26 @@
+/* || Variabeles */
+:root {
+  --color-one: #707c64;
+  --color-two: #b3c79f;
+  --color-three: #ffffef;
+
+  --line-height-header: 80px;
+}
+
+/* || BASE */
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-three);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
