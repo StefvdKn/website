@@ -13,8 +13,19 @@
 
 .menu-item {
   list-style-type: none;
+  border: solid 3px red;
+}
+
+.menu-item:hover > .sub-menu {
+  display: flex;
+  flex-direction: column;
 }
 
 .sub-menu {
   display: none;
+  position: absolute;
+  padding: 0px 15px;
+  min-width: 150px;
+  text-align: center;
+  background-color: var(--color-one);
 }
