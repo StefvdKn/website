@@ -24,3 +24,17 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
+/* // Image styling */
+.solid-border {
+  border: solid 3px var(--color-one);
+}
+
+.double-border {
+  border: double 5px var(--color-one);
+}
+
+.shadow-border {
+  box-shadow: 0px 3px 10px grey;
+}
