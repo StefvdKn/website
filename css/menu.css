@@ -5,7 +5,7 @@
 .menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 
   line-height: 80px;
@@ -13,7 +13,13 @@
 
 .menu-item {
   list-style-type: none;
-  border: solid 3px red;
+  text-align: center;
+  padding: 0px 1vw;
+  border: solid 1px red;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
 }
 
 .menu-item:hover > .sub-menu {
@@ -24,8 +30,8 @@
 .sub-menu {
   display: none;
   position: absolute;
-  padding: 0px 15px;
-  min-width: 150px;
-  text-align: center;
   background-color: var(--color-one);
+  width: 11vw;
+  transform: translateX(-1vw);
+  line-height: 40px;
 }
