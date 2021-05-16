@@ -8,6 +8,8 @@
   justify-content: flex-end;
   align-items: center;
 
+  color: var(--color-three);
+
   line-height: 80px;
 }
 
