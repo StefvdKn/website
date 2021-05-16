@@ -7,6 +7,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  line-height: 80px;
 }
 
 .menu-item {
@@ -14,5 +16,5 @@
 }
 
 .sub-menu {
-
+  display: none;
 }
