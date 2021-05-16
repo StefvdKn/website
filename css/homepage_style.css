@@ -51,7 +51,7 @@ a {
 
   display: grid;
   grid-template-areas: 'logo menu';
-  grid-template-columns: 15vw auto;
+  grid-template-columns: auto auto;
 
   height: var(--line-height-header);
   background-color: var(--color-one);
@@ -62,7 +62,12 @@ a {
 
 .logo {
   grid-area: logo;
-  margin-left: 2vw;
+  margin-left: 1vw;
+
+  line-height: calc(var(--line-height-header)/2);
+
+  align-items: center;
+  text-align: left;
 
   color: var(--color-three);
 }
